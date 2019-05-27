@@ -7,13 +7,13 @@ ubuntu 18.04 - bionic
 ## Сборка
 Клонируем себе репу:
 ```bash
-git clone 
+git clone git@github.com:OrangeAppsRu/build-smartmontools.git
 cd build-smartmontools
 ```
 ### Подготовка
 На первом этапе вам нужно отредактировать файлы `debian_changelog_*` и `debian_control_*` в зависимости от того для какой версии ubuntu вы хотите собрать. `debian_control_*` часто  не требуется редактирования. Если хотите чтобы версия dpkg пакета называлась определенным образом, то вам необходимл испоавить файл`debian_changelog_*` (**Будьте осторожны, changelog имеет четко определнный формат, лишние пробелы, табы, пропуски строк могут сломать сборку**)
 
-Например для ubuntu 16.04 (xenial) я хочу чтобы версия пакета называлась **7.0~xenial~tapclap**. Тогда в начало файла `debian_changelog_xenial` я додавлю следущее:
+Например для ubuntu 16.04 (xenial) я хочу чтобы версия пакета называлась `7.0~xenial~tapclap`. Тогда в начало файла `debian_changelog_xenial` я додавлю следущее:
 ```
 smartmontools (7.0~xenial~tapclap) unstable; urgency=medium
 
