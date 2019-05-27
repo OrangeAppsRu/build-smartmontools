@@ -32,8 +32,8 @@ docker build -t build-smartmontools:xenial ./
 Теперь у вас готов образ, в котором есть все что нужно для сборки. Достаточно его запустить и собрать smartmontools
 ```bash
 docker run --rm -it -v $PWD:/root/share build-smartmontools:xenial bash # запустили контейнер и прокинули в него текущую директоию, которая примонтируется в /root/share внутри контейнера
-# Теперь мы внутри контейнера
-В зависимости от того, какой вы аргумент указывали для `url_smartmontools_archive` ([Собираем для другой версии smartmontools](#Собираем для другой версии smartmontools) заходим в папку версии smartmontools которую хотите сбилдить. По умолчанию smartmontools-7.0
+# Теперь мы внутри контейнера 
+# В зависимости от того, какой вы аргумент указывали для url_smartmontools_archive. Заходим в папку версии smartmontools которую хотите сбилдить. По умолчанию smartmontools-7.0
 cd smartmontools-7.0
 # билдим
 debuild -b -uc -us
